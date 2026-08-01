@@ -6,7 +6,6 @@
   let cur = 0, timer = null;
   const total = slides.length;
 
-  // Build dots
   slides.forEach((_,i) => {
     const d = document.createElement('div');
     d.className = 'qdot' + (i===0?' on':'');
@@ -80,17 +79,6 @@ function showReviews() {
     });
 }
 
-// function printResult() {
-//     const printContent = document.getElementById("resultSection").innerHTML;
-//     const originalContent = document.body.innerHTML;
-
-//     document.body.innerHTML = printContent;
-//     window.print();
-//     document.body.innerHTML = originalContent;
-
-//     location.reload();
-// }
-
 function downloadResult() {
     html2canvas(document.getElementById("resultSection"), {
         ignoreElements: (element) =>
@@ -103,55 +91,12 @@ function downloadResult() {
     });
 }
 
-function toggleMenu() {
-    document
-        .getElementById("navMenu")
-        .classList
-        .toggle("active");
-}
+const hamburger=document.getElementById("hamburger");
+const navMenu=document.getElementById("navMenu");
 
-function closeMenu() {
-    document
-        .getElementById("navMenu")
-        .classList
-        .remove("active");
-}
+hamburger.addEventListener("click",()=>{
 
-const slides =
-document.querySelectorAll(".quote-slide");
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
 
-let current = 0;
-
-function showReview(index){
-
-slides.forEach(slide=>{
-slide.style.display="none";
-slide.classList.remove("active");
 });
-
-slides[index].style.display="block";
-slides[index].classList.add("active");
-
-}
-
-function nextReview(){
-
-current =
-(current + 1)
-% slides.length;
-
-showReview(current);
-
-}
-
-function prevReview(){
-
-current =
-(current - 1 + slides.length)
-% slides.length;
-
-showReview(current);
-
-}
-
-showReview(current);

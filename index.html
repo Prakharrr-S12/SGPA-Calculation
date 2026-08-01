@@ -15,33 +15,21 @@
 
 <header class="navbar">
     <div class="logo">
-        SGPA Calculator
+        <span>SGPA</span> Calculator
     </div>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
-☰
-</button>
-    <nav id="navMenu">
-        <div class="nav-buttons">
-          <button class="nav-btn"
-onclick="showHome(); closeMenu()">
-Home
-</button>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-<button class="nav-btn"
-onclick="showInstructions(); closeMenu()">
-Instruction
-</button>
-
-<button class="nav-btn"
-onclick="showFeedback(); closeMenu()">
-Feedback
-</button>
-
-<button class="nav-btn"
-onclick="showReviews(); closeMenu()">
-Reviews
-</button>
+    <nav>
+        <div class="nav-buttons" id="navMenu">
+            <button class="nav-btn" onclick="showHome()">Home</button>
+            <button class="nav-btn" onclick="showInstructions()">Instruction</button>
+            <button class="nav-btn" onclick="showFeedback()">Feedback</button>
+            <button class="nav-btn" onclick="showReviews()">Reviews</button>
         </div>
     </nav>
 </header>
@@ -214,60 +202,11 @@ Overall outstanding in terms of performance."</div>
         <div class="quote-attr">— Vedant Sane (CSE-IOT)</div>
       </div>
 
-      <div class="quote-slide">
-        <div class="review-icon">⭐⭐⭐⭐⭐</div>
-        <div class="quote-text">"Amazing 😍."</div>
-        <div class="quote-attr">— Keertika (CSE-IOT)</div>
-      </div>
-
-      <div class="quote-slide">
-        <div class="review-icon">⭐⭐⭐⭐⭐</div>
-        <div class="quote-text">"Superbbbb!!!!✨✨✨✨."</div>
-        <div class="quote-attr">— Manthan Patil (CSE-IOT)</div>
-      </div>
-
-      <div class="quote-slide">
-        <div class="review-icon">⭐⭐⭐⭐⭐</div>
-        <div class="quote-text">"Smexy Website just like bro 😝 . Good work clean interface and fast calculation 🧮."</div>
-        <div class="quote-attr">— Sandesh (CSE-IOT)</div>
-      </div>
-
-      <div class="quote-slide">
-        <div class="review-icon">⭐⭐⭐⭐⭐</div>
-        <div class="quote-text">"Its really helpful web 👍. Simple and elegant interface ✨️. Overall a great work 👍."</div>
-        <div class="quote-attr">— Jeevika (CSE-IOT)</div>
-      </div>
-
-      <div class="quote-slide">
-        <div class="review-icon">⭐⭐⭐⭐⭐</div>
-        <div class="quote-text">"Excellent work beta keep it up!🤩."</div>
-        <div class="quote-attr">— Vipin kumar gupta (Faculty department )</div>
-      </div>
-
     </div>
-    <div class="review-controls">
-
-<button class="review-btn" onclick="prevReview()">
-❮
-</button>
-
-<button class="review-btn" onclick="nextReview()">
-❯
-</button>
-
-</div>
-
-<div class="quote-dots" id="quoteDots"></div>
-
-</div>
-
+    <div class="quote-dots" id="quoteDots"></div>
+  </div>
   </div>
 <hr>
-<div class="about">
-    <p class="about-text">
-        © SGPA Calculator for SIES GST Students • Developed by Prakhar & Vedant (CSE-IOT)
-    </p>
-</div>
   <script src="script.js"></script>
 
 </body>
